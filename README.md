@@ -2,7 +2,6 @@
 
 ## Description
 
-
 [Link to deployed application]()
 
 ## Installation
@@ -16,7 +15,10 @@ N/A
 
 ## Credits
 
-N/A
+El Elnimeiry
+Jane Collazo
+Jonah Kane
+Sara Schroeder
 
 ## License
 
