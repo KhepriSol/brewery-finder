@@ -19,7 +19,6 @@ El Elnimeiry
 Jane Collazo
 Jonah Kane
 Sara Schroeder
-N/A
 
 ## License
 
