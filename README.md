@@ -2,8 +2,6 @@
 
 ## Description
 
-
-
 [Link to deployed application]()
 
 ## Installation
@@ -25,3 +23,7 @@ Sara Schroeder
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+# general notes - jonah
+
+<!-- <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRMdBEtvNSdYwH1s7dN5GRVKo7_UPIoEw&callback=initMap" defer></script> -->
