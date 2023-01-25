@@ -1,3 +1,4 @@
+//random beer genorator api
 document.addEventListener('DOMContentLoaded', () => {
 const startBtn = document.querySelector('.beer-button')
 const randomBeer= document.querySelector('.random-beer')

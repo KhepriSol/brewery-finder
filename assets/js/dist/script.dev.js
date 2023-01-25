@@ -1,5 +1,6 @@
 "use strict";
 
+//random beer genorator api
 document.addEventListener('DOMContentLoaded', function () {
   var startBtn = document.querySelector('.beer-button');
   var randomBeer = document.querySelector('.random-beer');
