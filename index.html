@@ -17,7 +17,7 @@
         <div class="navbar-brand">
             <a class="navbar-item" href="#home">Home</a></li>
             <a class="navbar-item" href="#BreweryLocator">Brewery Locator</a></li>
-            <a class="navbar-item" href="#GuestBook">View Out Guest Book!</a></li>
+            <a class="navbar-item" href="#GuestBook">View Our Guest Book!</a></li>
         </div>
     </nav>
     <!--header-->
@@ -42,18 +42,23 @@ a second field for what their favorite type of beer is
     <section class="guestBook">
 
         <div class="input-group">
-            <label for="userName">Name</label>
+            <label for="yourName">Name</label>
             <input type="text" name="name" id="name" placeholder="Jacob Leinenkugel" />
         </div>
         <div class="input-group">
             <label for="favoriteBeer">Tell us your favorite type of beer!</label>
             <input type="text" name="favoriteBeer" id="favoriteBeer" placeholder="Leinenkugel Honey Weiss" />
         </div>
+        <div class="card">
+            <h2>Last Submitted User:</h2>
+            <p><strong>Name:</strong> <span id="yourName"></span></p>
+            <p><strong>Their Favorite Beer:</strong> <span id="favoriteBeer"></span></p>
+        </div>
     </section>
 
 
 
-    <button class="button is-danger">Submit</button>
+    <button class="submitButton button is-danger">Submit</button>
 </body>
 
 </html>

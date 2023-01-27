@@ -1,3 +1,8 @@
+var userNameSpan = document.querySelector("#yourName");
+var userFavoriteSpan = document.querySelector("#favoriteBeer");
+let submitButton = document.querySelector("#submitButton");
+
+
 //random beer genorator api
 document.addEventListener('DOMContentLoaded', () => {
 const startBtn = document.querySelector('.beer-button')
@@ -10,50 +15,64 @@ function getData() {
         return response.json()
     })
     .then(data => {
-    console.log(data)
-    const name = data[0].name
-    console.log(name)
-    const description = data[0].description
-    console.log(description)
-    const {volume} = data[0]
+        console.log(data)
+        const name = data[0].name
+        console.log(name)
+        const description = data[0].description
+        console.log(description)
+        const {volume} = data[0]
     const volumeValue= volume.value
     const volumeUnit = volume.unit
     console.log(volumeUnit)
     console.log(volumeValue)
-
+    
     randomBeer.innerHTML = name + ' ' + volumeValue + volumeUnit 
     descriptionDisplay.innerHTML = description
-
-    })
+    
+})
 
 }
 
 startBtn.addEventListener('click', getData)
- 
+
 
 })
 
-createSubmit.addEventListener("click", function () {
-    let firstName = createInput.value;
-    
-    if (firstName === '') {
-        //if they did not enter anything, they will get a pop up on the screen saying they forgot to enter, and will have the opportunity again
-        alert("You forgot to enter your name!");
-        //if they did enter something, it will start to record their initials and their score, or how much time is left
-    } else {
-        let finalScore = {
-            firstName: firstName,
-        }
-        //this is me checking to make sure final score is being collected
-        //stores that score to local storage
-        let users = localStorage.getItem("users");
-        if (users === null) {
-            users = [];
-        } else {
-            users = JSON.parse(users);
-        }
-        users.push(users);
-        let favBeers = JSON.stringify(users);
-        localStorage.setItem("users", favBeers);
+renderLastRegistered();
+
+function displayMessage(type, message) {
+  msgDiv.textContent = message;
+  msgDiv.setAttribute("class", type);
+}
+
+function renderLastRegistered() {
+    let yourName = localStorage.getItem("yourName");
+    let favoriteBeer = localStorage.getItem("favoriteBeer");
+  
+    if (!yourName || !favoriteBeer) {
+      return;
     }
+  
+    userNameSpan.textContent = yourName;
+    userFavoriteSpan.textContent = favoriteBeer;
+}
+
+
+ submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    let yourName = document.querySelector("#yourName");
+    let favoriteBeer = document.querySelector("#favoriteBeer");
+
+if (yourName === "") {
+    displayMessage("error", "You forgot to enter your name!");
+} else if (favoriteBeer === "") {
+    displayMessage("error", "You forgot to enter your favorite beer!");
+  } else {
+    displayMessage("success", "Registered successfully");
+
+    localStorage.setItem("yourName", yourName);
+    localStorage.setItem("favoriteBeer", favoriteBeer);
+    renderLastRegistered();
+  }
 });
