@@ -60,7 +60,7 @@ function renderLastRegistered() {
 }
 
 
-submitButton.addEventListener("click", function(event) {
+ submitButton.addEventListener("click", function(event) {
     event.preventDefault();
     
     let yourName = document.querySelector("#yourName");
