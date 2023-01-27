@@ -13,9 +13,7 @@ h1 {
 
 }
 
-.button {
-    box-shadow: 10px 10px 0px black;
-  }
+
  
   body {
     
@@ -24,4 +22,18 @@ h1 {
 
   }
   
- 
+
+  .container {
+    position: relative;
+}
+
+
+.card {
+  background: #eaeaea;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  
+  margin: 1em;
+  }
+
