@@ -10,17 +10,28 @@ h1 {
     font-size: 50px;
     font-family:'Courier New', Courier, monospace;
     text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
 
 }
 
 
+
+  .beer-button {
+    font-size: 20px;
+  }
  
   body {
-    
-    padding: 0 15%;
-    
-
+    padding: 0 15%;    
   }
+
+ .guestBook {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ }
   
 
   .container {
