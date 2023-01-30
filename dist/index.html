@@ -9,15 +9,14 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="assets/js/script.js" charset="UTF-8"></script>
 </head>
 <!--Add Navbar-->
 <body class="hero is-primary"> 
     <nav role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar navbar-item" href="#home">Home</a></li>
-            <a class="navbar-item" href="#BreweryLocator">Brewery Locator</a></li>
-            <a class="navbar-item" href="#GuestBook">View Our Guest Book!</a></li>
+            <a class="navcard navbar-item has-text-black has-background-white" href="#home">Home</a></li>
+            <a class="navcard navbar-item has-text-black has-background-white" href="#BreweryLocator">Brewery Locator</a></li>
+            <a class="navcard navbar-item has-text-black has-background-white" href="#GuestBook">View Our Guest Book!</a></li>
         </div>
     </nav>
     <!--header-->
@@ -37,17 +36,17 @@
     </header>
     <h1>What's ya favorite beer baby?!</h1>
     <!-- need to enter text field or label for the user to enter their name and 
-a second field for what their favorite type of beer is 
+        a second field for what their favorite type of beer is 
  is this the right spot to do this?-->
     <section class="card guestBook">
 
         <div class="input-group">
             <label for="yourName">Name</label>
-            <input type="text" name="name" id="name" placeholder="Jacob Leinenkugel" />
+            <input type="text" name="yourName" id="yourName" placeholder="i.e. Jacob Leinenkugel" />
         </div>
         <div class="input-group">
             <label for="favoriteBeer">Tell us your favorite type of beer!</label>
-            <input type="text" name="favoriteBeer" id="favoriteBeer" placeholder="Leinenkugel Honey Weiss" />
+            <input type="text" name="favoriteBeer" id="favoriteBeer" placeholder="i.e. Leinenkugel Honey Weiss" />
         </div>
         <div>
             <h2>Last Submitted User:</h2>
@@ -57,8 +56,11 @@ a second field for what their favorite type of beer is
     </section>
 
 
+    <div id="msg"></div>
 
-    <button class="submitButton button is-danger">Submit</button>
+    <button class="submitButton button is-danger" id="submitButton">Submit</button>
+    <script src="assets/js/script.js" charset="UTF-8"></script>
+
 </body>
 
 </html>

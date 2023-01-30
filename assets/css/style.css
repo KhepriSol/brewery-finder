@@ -1,11 +1,11 @@
-.navbar {
+.navcard {
     padding: 0.5em 1em;
     border-radius: 18px;
-    background-color: #d5acec;
+    background-color: #ffffff;
     color:black;
     font-size: 120%;
-    width: calc(89% - 60px);
-
+    width: calc(18% - 10px);
+    border: 2px solid black;
 }
 
 h1 {
@@ -42,11 +42,12 @@ h1 {
 
 
 .card {
-  background: #ffe3e3;
+  background: #ffffff;
   padding: 2em;
   border-radius: 30px;
   width: 100%;
   margin: 1em;
   box-shadow: 10px 10px 0px   black;
+  border: 2px solid black;
   }
 
