@@ -13,9 +13,9 @@
 </head>
 <!--Add Navbar-->
 <body class="hero is-primary"> 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="#home">Home</a></li>
+            <a class="navbar navbar-item" href="#home">Home</a></li>
             <a class="navbar-item" href="#BreweryLocator">Brewery Locator</a></li>
             <a class="navbar-item" href="#GuestBook">View Our Guest Book!</a></li>
         </div>
@@ -39,7 +39,7 @@
     <!-- need to enter text field or label for the user to enter their name and 
 a second field for what their favorite type of beer is 
  is this the right spot to do this?-->
-    <section class="guestBook">
+    <section class="card guestBook">
 
         <div class="input-group">
             <label for="yourName">Name</label>
@@ -49,7 +49,7 @@ a second field for what their favorite type of beer is
             <label for="favoriteBeer">Tell us your favorite type of beer!</label>
             <input type="text" name="favoriteBeer" id="favoriteBeer" placeholder="Leinenkugel Honey Weiss" />
         </div>
-        <div class="card">
+        <div>
             <h2>Last Submitted User:</h2>
             <p><strong>Name:</strong> <span id="yourName"></span></p>
             <p><strong>Their Favorite Beer:</strong> <span id="favoriteBeer"></span></p>
