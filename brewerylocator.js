@@ -47,20 +47,3 @@ function initMap() {
   window.initMap = initMap;
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     let s = document.createElement("script");
-//     document.head.appendChild(s);
-//     s.addEventListener("load", () => {
-//         console.log("script has loaded");
-//         map = new google.maps.Map(document.getElementById("map"), {
-//             center: {
-//                 lat: 44.9778,
-//                 lng: -93.2650,
-//             },
-//             zoom: 12,
-//             mapTypeId: google.maps.MapTypeId.ROADMAP
-//         });
-//     });
-//     s.src = `https://maps.googleapis.com/maps/api/js?key=${mapKey}&callback=initMap`
-// });
-
