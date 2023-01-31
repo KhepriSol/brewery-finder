@@ -3,6 +3,7 @@
 var map;
 var service;
 var infoWindow;
+var searchBox;
 var mapKey = "AIzaSyBybEyfduGmfs_d0oWy_90x0T4plbuRWB8";
 
 function initMap() {
@@ -12,8 +13,39 @@ function initMap() {
     center: minneapolis,
     zoom: 12
   });
+  var input = document.getElementById("search-input");
+  searchBox = new google.maps.places.SearchBox(input);
+  map.addListener("bounds_changed", function () {
+    searchBox.setBounds(map.getBounds());
+  });
+  searchBox.addListener("places_changed", function () {
+    var places = searchBox.getPlaces();
+    if (places.length == 0) return;
+    var bounds = new google.maps.LatLngBounds();
+    places.forEach(function (place) {
+      if (place.geometry.viewport) {
+        bounds.union(place.geometry.viewport);
+      } else {
+        bounds.extend(place.geometry.location);
+      }
+    });
+    map.fitBounds(bounds);
+    var request = {
+      location: map.getCenter(),
+      radius: 5000,
+      keyword: "Microbreweries"
+    };
+    service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, function (results, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        for (var i = 0; i < results.length; i++) {
+          createMarker(results[i]);
+        }
+      }
+    });
+  });
   var request = {
-    location: minneapolis,
+    location: map.getCenter(),
     radius: 5000,
     keyword: "Microbreweries"
   };
@@ -39,7 +71,5 @@ function createMarker(place) {
   });
 }
 
-window.initMap = initMap; // this does not function as expected.... tried to center the map around minneapolis (see line 8 & 12) but when i launch the HTML in live server, it 
-// shows me only 1 map pin at a local brewery here in farmington.  not what i wanted to happen, but at least it pulls SOMETHING???
-// i need to work on this more. but clearly running out of time.... will be back on my computer early afternoon to try to work on this more
+window.initMap = initMap;
 //# sourceMappingURL=brewerylocator.dev.js.map

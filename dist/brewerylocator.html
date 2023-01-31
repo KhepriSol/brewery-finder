@@ -14,25 +14,38 @@
     <h1 class="has-text-warning-light">Brewery Locator</h1>
     <nav role="navigation" aria-label="main navigation">
         <div class="navbar-brand is-centered">
-            
-            <a class="navcard navbar-item has-text-black has-background-danger-light" href="index.html"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"></path></svg> Home</a>
-            <a class="navcard navbar-item has-text-black has-background-danger-light" href="#BreweryLocator"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"></path></svg>Brewery Locator</a>
-            
+
+            <a class="navcard navbar-item has-text-black has-background-danger-light" href="index.html"><svg
+                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
+                    width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z">
+                    </path>
+                </svg> Home</a>
+            <a class="navcard navbar-item has-text-black has-background-danger-light" href="#BreweryLocator"><svg
+                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em"
+                    width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z">
+                    </path>
+                </svg>Brewery Locator</a>
+
         </div>
     </nav>
     <header class="card is-medium has-background-danger-light is-bold">
-        <div class="hero-body ">
+         <div class="hero-body ">
             <div class="container has-text-centered">
-    <div id="map"></div>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBybEyfduGmfs_d0oWy_90x0T4plbuRWB8&libraries=geometry,places&callback=initMap"></script>
-    </div>
-    </div>
-</header>
+                
+                <div id="map"></div>
+                <script async
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBybEyfduGmfs_d0oWy_90x0T4plbuRWB8&libraries=geometry,places&callback=initMap"></script>
+                    <br>
+                    <input class="yourName" id="search-input" type="text" placeholder="Search location">
+            </div>
+        </div>
+    </header>
 </body>
 <script src="./brewerylocator.js"></script>
 <footer><br><br></footer>
-</html>
 
-<!-- created 2nd html page because i did not know how to integrate this into the existing page 
-without distorting everything... figured the nav buttons would be easy enough to use to bring the user
-to another page to have the map be completely by itself and have a nice clean appearance -->
+</html>
