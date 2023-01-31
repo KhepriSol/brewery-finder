@@ -37,10 +37,28 @@ function getData() {
 
 startBtn.addEventListener('click', getData)
 
+const submitButton = document.querySelector("#submitButton");
+const yourName = document.querySelector("#yourName");
+const favoriteBeer = document.querySelector("#favoriteBeer");
+const userNameSpan = document.querySelector("#userName");
+const userFavoriteSpan = document.querySelector("#userFavorite");
+const msgDiv = document.querySelector("#msg");
 
-})
+submitButton.addEventListener("click", function(event) {
+  event.preventDefault();
 
-renderLastRegistered();
+  if (yourName.value === "") {
+    displayMessage("error", "You forgot to enter your name!");
+  } else if (favoriteBeer.value === "") {
+    displayMessage("error", "You forgot to enter your favorite beer!");
+  } else {
+    displayMessage("success", "Registered successfully");
+
+    localStorage.setItem("yourName", yourName.value);
+    localStorage.setItem("favoriteBeer", favoriteBeer.value);
+    renderLastRegistered();
+  }
+});
 
 function displayMessage(type, message) {
   msgDiv.textContent = message;
@@ -48,35 +66,18 @@ function displayMessage(type, message) {
 }
 
 function renderLastRegistered() {
-    let yourName = localStorage.getItem("yourName");
-    let favoriteBeer = localStorage.getItem("favoriteBeer");
-  
-    if (!yourName || !favoriteBeer) {
-      return;
-    }
-  
-    userNameSpan.textContent = yourName;
-    userFavoriteSpan.textContent = favoriteBeer;
+  const yourName = localStorage.getItem("yourName");
+  const favoriteBeer = localStorage.getItem("favoriteBeer");
+
+  if (!yourName || !favoriteBeer) {
+    return;
+  }
+
+  userNameSpan.textContent = yourName;
+  userFavoriteSpan.textContent = favoriteBeer;
 }
 
-
- submitButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    
-    let yourName = document.querySelector("#yourName");
-    let favoriteBeer = document.querySelector("#favoriteBeer");
-
-if (yourName === "") {
-    displayMessage("error", "You forgot to enter your name!");
-} else if (favoriteBeer === "") {
-    displayMessage("error", "You forgot to enter your favorite beer!");
-  } else {
-    displayMessage("success", "Registered successfully");
-
-    localStorage.setItem("yourName", yourName);
-    localStorage.setItem("favoriteBeer", favoriteBeer);
-    renderLastRegistered();
-  }
+renderLastRegistered();
 });
 
 
