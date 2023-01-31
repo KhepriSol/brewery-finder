@@ -1,12 +1,22 @@
-.navcard {
-    padding: 0.5em 1em;
-    border-radius: 18px;
-    background-color: #ffffff;
-    color:black;
-    font-size: 120%;
-    width: calc(18% - 10px);
-    border: 2px solid black;
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
 }
+
+.navcard {
+  padding: 0.5em 1em;
+  border-radius: 18px;
+  color: black;
+ 
+  font-size: 110%;
+  width: calc(18% - 10px);
+  border: 2px solid black;
+  margin: 0 1em;
+}
+
+
+
 
 h1 {
     font-size: 50px;
