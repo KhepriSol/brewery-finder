@@ -1,15 +1,14 @@
 .navbar-brand {
   display: flex;
   justify-content: center;
-  padding: 3em;
+  padding: 1.8em;
 }
 
 .navcard {
   padding: 0.5em 1em;
   border-radius: 18px;
   color: black;
- 
-  font-size: 110%;
+  font-size: 100%;
   width: calc(18% - 10px);
   border: 2px solid black;
   margin: 0 1em;
