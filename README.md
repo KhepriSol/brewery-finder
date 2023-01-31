@@ -2,6 +2,8 @@
 
 ## Description
 
+For our first project 
+
 [Link to deployed application]()
 
 ## Installation
