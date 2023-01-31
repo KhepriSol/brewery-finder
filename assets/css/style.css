@@ -1,10 +1,22 @@
-.navbar {
-    margin: 0%; 
-    height: 50%;
-    font-size: 20px; 
-    border-style: solid;
-    border-width: 3px;
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
 }
+
+.navcard {
+  padding: 0.5em 1em;
+  border-radius: 18px;
+  color: black;
+ 
+  font-size: 110%;
+  width: calc(18% - 10px);
+  border: 2px solid black;
+  margin: 0 1em;
+}
+
+
+
 
 h1 {
     font-size: 50px;
@@ -40,11 +52,12 @@ h1 {
 
 
 .card {
-  background: #eaeaea;
+  background: #ffffff;
   padding: 2em;
   border-radius: 30px;
   width: 100%;
   margin: 1em;
-  box-shadow: 10px 10px 5px   black;
+  box-shadow: 10px 10px 0px   black;
+  border: 2px solid black;
   }
 

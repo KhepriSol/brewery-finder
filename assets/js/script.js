@@ -1,6 +1,8 @@
-var userNameSpan = document.querySelector("#yourName");
-var userFavoriteSpan = document.querySelector("#favoriteBeer");
+let userNameSpan = document.querySelector("#yourName");
+let userFavoriteSpan = document.querySelector("#favoriteBeer");
 let submitButton = document.querySelector("#submitButton");
+let msgDiv = document.querySelector("#msg");
+
 
 
 //random beer genorator api
