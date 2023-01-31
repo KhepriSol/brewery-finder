@@ -57,3 +57,17 @@ h1 {
   border: 2px solid black;
   }
 
+  .guestBook {
+    width: 100%;
+    display: flex;
+  }
+  .box{
+    padding: 2em;
+    border-radius: 30px;
+    width: 45%;
+    margin: 1em;
+    box-shadow: 10px 10px 0px   black;
+    border: 2px solid black;
+    
+  }
+ 

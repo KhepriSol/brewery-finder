@@ -36,7 +36,8 @@
         <p class="description"></p>
     </section>
     </header>
-    <section class="card guestBook has-background-danger-light">
+    <section class="guestBook">
+        <content class="box has-background-danger-light">
     <h1>What's ya favorite beer baby?!</h1>
     <!-- need to enter text field or label for the user to enter their name and 
         a second field for what their favorite type of beer is 
@@ -48,15 +49,18 @@
         <div class="input-group">
             <label for="favoriteBeer">Tell us your favorite type of beer!</label>
             <input type="text" name="favoriteBeer" id="favoriteBeer" placeholder="i.e. Leinenkugel Honey Weiss" />
+            <button class="submitButton button is-danger is-rounded" id="submitButton">Submit</button>
         </div>
+    </content>
+    
+        <content class="box has-background-danger-light">
         <div>
             <h2>Last Submitted User:</h2>
             <p><strong>Name:</strong> <span id="yourName"></span></p>
             <p><strong>Their Favorite Beer:</strong> <span id="favoriteBeer"></span></p>
-            <button class="submitButton button is-danger is-rounded" id="submitButton">Submit</button>
         </div>
-    </section>
-
+        </content>
+       </section>
 
     <div id="msg"></div>
 
