@@ -43,6 +43,3 @@ window.initMap = initMap;
 
 
 
-// this does not function as expected.... tried to center the map around minneapolis (see line 8 & 12) but when i launch the HTML in live server, it 
-// shows me only 1 map pin at a local brewery here in farmington.  not what i wanted to happen, but at least it pulls SOMETHING???
-// i need to work on this more. but clearly running out of time.... will be back on my computer early afternoon to try to work on this more
